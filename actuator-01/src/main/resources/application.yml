@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: my-actuator-demo
+  data:
+    mongodb:
+      host: 10.0.0.52
+      port: 27018
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+      enabled: true
+
+info:
+  app:
+    name: my-actuator-app
+  application:
+    name: ${spring.application.name}
+
